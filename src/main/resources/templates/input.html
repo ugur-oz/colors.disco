@@ -12,7 +12,7 @@
     <h1>Saved Colors</h1>
     <div th:each="color : ${savedColors}"
          th:text="${color.value}"
-         th:style:="${color.getTextColor()}"></div>
+         th:style="${color.getTextColor()}"></div>
 
 </form>
 </body>

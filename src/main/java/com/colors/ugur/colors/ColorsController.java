@@ -24,7 +24,7 @@ public class ColorsController {
 
     @PostMapping("start")
     public String saveColor(Color color, Model model) {
-        model.addAttribute("objectToSave", new Color());
+        model.addAttribute("objectToSave", color);
         colors.add(color);
         model.addAttribute("savedColors",colors);
         return "input";
