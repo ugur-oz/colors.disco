@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Wilkommen</title>
+</head>
+<body>
+
+<form method="post" action="start" th:object="${objectToSave}">
+    <input th:field="*{value}">
+    <button type="submit">ok</button>
+    <h1>Saved Colors</h1>
+    <div th:each="color : ${savedColors}"
+         th:text="${color.value}"
+         th:style:="${color.getTextColor()}"></div>
+
+</form>
+</body>
+</html>
